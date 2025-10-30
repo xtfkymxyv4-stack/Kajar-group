@@ -382,3 +382,104 @@ if (typeof module !== 'undefined' && module.exports) {
         Utils
     };
 }
+// ============================================
+// SWIPER CAROUSELS INITIALIZATION
+// ============================================
+
+// Attendre que Swiper soit chargé
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Vérifier que Swiper est disponible
+    if (typeof Swiper === 'undefined') {
+        console.error('Swiper library not loaded!');
+        return;
+    }
+
+    // Configuration commune pour tous les carousels
+    const commonConfig = {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            968: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        }
+    };
+
+    // Initialiser le carousel "Notre Approche" (4 slides)
+    const approcheSwiper = new Swiper('.approche-swiper', {
+        ...commonConfig,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        }
+    });
+
+    // Initialiser le carousel "Domaines d'Intervention" (7 slides)
+    const domainesSwiper = new Swiper('.domaines-swiper', {
+        ...commonConfig,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        }
+    });
+
+    // Initialiser le carousel "RSE" (4 slides)
+    const rseSwiper = new Swiper('.rse-swiper', {
+        ...commonConfig,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        }
+    });
+
+    // Log pour confirmer l'initialisation
+    console.log('✅ Swiper carousels initialized successfully!');
+    console.log('- Approche carousel:', approcheSwiper);
+    console.log('- Domaines carousel:', domainesSwiper);
+    console.log('- RSE carousel:', rseSwiper);
+
+    // Gérer la pause de l'autoplay quand on change de langue
+    // (pour éviter les transitions pendant le changement)
+    const languageButtons = document.querySelectorAll('[data-lang]');
+    languageButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            approcheSwiper.autoplay.stop();
+            domainesSwiper.autoplay.stop();
+            rseSwiper.autoplay.stop();
+            
+            setTimeout(() => {
+                approcheSwiper.autoplay.start();
+                domainesSwiper.autoplay.start();
+                rseSwiper.autoplay.start();
+            }, 500);
+        });
+    });
+});
