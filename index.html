@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -167,20 +169,69 @@
         </div>
     </section>
 
-    <!-- Approche -->
-    <section class="section-dark" id="approche">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-fr="Notre Approche" data-en="Our Approach" data-pt="A Nossa Abordagem">Notre Approche</h2>
-                <div class="section-divider"></div>
+            <!-- Approche -->
+<section class="section-dark" id="approche">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-fr="Notre Approche" data-en="Our Approach" data-pt="A Nossa Abordagem">Notre Approche</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <!-- Swiper Approche -->
+        <div class="swiper approche-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="approach-card">
+                        <div class="approach-number">01</div>
+                        <h3 data-fr="Analyse Stratégique" data-en="Strategic Analysis" data-pt="Análise Estratégica">Analyse Stratégique</h3>
+                        <p data-fr="Comprendre les besoins réels des territoires" data-en="Understanding the real needs of territories" data-pt="Compreender as reais necessidades dos territórios">Comprendre les besoins réels des territoires</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="approach-card">
+                        <div class="approach-number">02</div>
+                        <h3 data-fr="Structuration" data-en="Structuring" data-pt="Estruturação">Structuration</h3>
+                        <p data-fr="Concevoir des projets bancables et attractifs" data-en="Designing bankable and attractive projects" data-pt="Conceber projetos bancáveis e atrativos">Concevoir des projets bancables et attractifs</p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="approach-card">
+                        <div class="approach-number">03</div>
+                        <h3 data-fr="Partenariats Solides" data-en="Strong Partnerships" data-pt="Parcerias Sólidas">Partenariats Solides</h3>
+                        <p data-fr="Mobiliser les bons acteurs publics et privés" data-en="Mobilizing the right public and private stakeholders" data-pt="Mobilizar os atores públicos e privados adequados">Mobiliser les bons acteurs publics et privés</p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div class="approach-card">
+                        <div class="approach-number">04</div>
+                        <h3 data-fr="Exécution Maîtrisée" data-en="Controlled Execution" data-pt="Execução Controlada">Exécution Maîtrisée</h3>
+                        <p data-fr="Garantir des résultats concrets, mesurables et durables" data-en="Ensuring concrete, measurable, and sustainable results" data-pt="Garantir resultados concretos, mensuráveis e sustentáveis">Garantir des résultats concrets, mesurables et durables</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="approach-grid">
-                <div class="approach-card">
-                    <div class="approach-number">01</div>
-                    <h3 data-fr="Analyse Stratégique" data-en="Strategic Analysis" data-pt="Análise Estratégica">Analyse Stratégique</h3>
-                    <p data-fr="Comprendre les besoins réels des territoires" data-en="Understanding the real needs of territories" data-pt="Compreender as reais necessidades dos territórios">Comprendre les besoins réels des territoires</p>
-                </div>
+            <!-- Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="cta-box">
+            <h3 data-fr="Notre Ambition" data-en="Our Ambition" data-pt="A Nossa Ambição">Notre Ambition</h3>
+            <p data-fr="Porter une vision panafricaine du développement fondée sur la performance, la souveraineté et la durabilité. KAJAR GROUP aspire à devenir une référence continentale dans la conception et la mise en œuvre de projets intégrés, contribuant activement à la création d'emplois et à la valorisation des ressources africaines." data-en="To carry a Pan-African vision of development based on performance, sovereignty, and sustainability. KAJAR GROUP aims to become a continental benchmark in designing and implementing integrated projects, actively contributing to job creation and the enhancement of Africa's resources." data-pt="Transportar uma visão pan-africana de desenvolvimento baseada no desempenho, soberania e sustentabilidade. A KAJAR GROUP aspira a tornar-se uma referência continental na conceção e implementação de projetos integrados, contribuindo ativamente para a criação de empregos e valorização dos recursos africanos.">Porter une vision panafricaine du développement fondée sur la performance, la souveraineté et la durabilité. KAJAR GROUP aspire à devenir une référence continentale dans la conception et la mise en œuvre de projets intégrés, contribuant activement à la création d'emplois et à la valorisation des ressources africaines.</p>
+        </div>
+    </div>
+</section>
+
                 <div class="approach-card">
                     <div class="approach-number">02</div>
                     <h3 data-fr="Structuration" data-en="Structuring" data-pt="Estruturação">Structuration</h3>
@@ -370,6 +421,8 @@
             </div>
         </div>
     </footer>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="js/script.js"></script>
 </body>
