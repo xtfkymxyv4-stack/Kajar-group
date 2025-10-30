@@ -966,3 +966,160 @@ a:focus {
         padding: 50px 0;
     }
 }
+/* ============================================
+   SWIPER CAROUSEL CUSTOMIZATION
+   ============================================ */
+
+/* Container général pour les carousels */
+.swiper {
+    width: 100%;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.swiper-wrapper {
+    padding-bottom: 40px;
+}
+
+.swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Assurer que les cartes prennent toute la hauteur du slide */
+.swiper-slide .approach-card,
+.swiper-slide .domain-card,
+.swiper-slide .rse-card {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Navigation Buttons - Style corporate */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Pagination - Style corporate */
+.swiper-pagination {
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--accent-color);
+    opacity: 1;
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* Responsive - Ajustement pour mobile */
+@media (max-width: 768px) {
+    .swiper {
+        padding: 20px 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 16px;
+    }
+
+    /* Masquer les boutons de navigation sur très petit écran */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+/* Configuration spécifique pour chaque carousel */
+
+/* Carousel Approche - 4 slides */
+.approche-swiper .swiper-slide {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .approche-swiper .swiper-slide {
+        width: 50%;
+    }
+}
+
+@media (min-width: 968px) {
+    .approche-swiper .swiper-slide {
+        width: 33.333%;
+    }
+}
+
+/* Carousel Domaines - 7 slides */
+.domaines-swiper .swiper-slide {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .domaines-swiper .swiper-slide {
+        width: 50%;
+    }
+}
+
+@media (min-width: 968px) {
+    .domaines-swiper .swiper-slide {
+        width: 33.333%;
+    }
+}
+
+/* Carousel RSE - 4 slides */
+.rse-swiper .swiper-slide {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .rse-swiper .swiper-slide {
+        width: 50%;
+    }
+}
+
+@media (min-width: 968px) {
+    .rse-swiper .swiper-slide {
+        width: 33.333%;
+    }
+}
+
+/* Animation au survol des cartes dans carousel */
+.swiper-slide .approach-card:hover,
+.swiper-slide .domain-card:hover,
+.swiper-slide .rse-card:hover {
+    transform: translateY(-10px);
+}
