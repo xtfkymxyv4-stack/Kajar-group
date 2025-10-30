@@ -339,10 +339,9 @@ const Utils = {
 
     // Format phone numbers
     formatPhone(phone) {
-        return phone.replace(/\D/g, '').replace(/(\d{3})(\d{2})(\d{3})(\d{2})(\d{2})/, '+$1 $2 $3 $4 $5');
+        return phone.replace(/\D/g, '').replace(/(\d{3})(\d{2})(\d{3})(\d{2})(\d{2})/, '+$1 $2 $3 $4 $// 
     }
 };
-
 // ===== INITIALIZE EVERYTHING =====
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
@@ -358,6 +357,91 @@ document.addEventListener('DOMContentLoaded', () => {
     // Log initialization
     console.log('🌍 KAJAR GROUP Website Initialized');
     console.log('Current Language:', languageManager.currentLang);
+
+    // ============================================
+    // SWIPER CAROUSELS INITIALIZATION
+    // ============================================
+    
+    // Vérifier que Swiper est disponible
+    if (typeof Swiper !== 'undefined') {
+        // Configuration commune pour tous les carousels
+        const commonConfig = {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                968: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            }
+        };
+
+        // Initialiser le carousel "Notre Approche" (4 slides)
+        if (document.querySelector('.approche-swiper')) {
+            const approcheSwiper = new Swiper('.approche-swiper', {
+                ...commonConfig,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                }
+            });
+            console.log('✅ Approche carousel initialized');
+        }
+
+        // Initialiser le carousel "Domaines d'Intervention" (7 slides)
+        if (document.querySelector('.domaines-swiper')) {
+            const domainesSwiper = new Swiper('.domaines-swiper', {
+                ...commonConfig,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                }
+            });
+            console.log('✅ Domaines carousel initialized');
+        }
+
+        // Initialiser le carousel "RSE" (4 slides)
+        if (document.querySelector('.rse-swiper')) {
+            const rseSwiper = new Swiper('.rse-swiper', {
+                ...commonConfig,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                }
+            });
+            console.log('✅ RSE carousel initialized');
+        }
+
+        console.log('✅ All Swiper carousels initialized successfully!');
+    } else {
+        console.error('❌ Swiper library not loaded!');
+    }
 });
 
 // ===== PERFORMANCE MONITORING =====
