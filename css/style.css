@@ -818,6 +818,126 @@ body {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
 }
+/* ================================
+   HERO CINEMATIC SECTION
+   ================================ */
+
+.hero-cinematic {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Background image avec animation zoom */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: slowZoom 10s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Overlay bleu foncé */
+.hero-overlay-cinematic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #002B45;
+    opacity: 0.38;
+    z-index: 2;
+}
+
+/* Contenu textuel */
+.hero-content-cinematic {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: -5vh;
+}
+
+.hero-title-cinematic {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    letter-spacing: 1.2px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-text-cinematic {
+    font-family: 'Lato', 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 75%;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Bouton CTA doré */
+.btn-cinematic {
+    display: inline-block;
+    padding: 16px 50px;
+    background-color: #C9A73E;
+    color: #002B45;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.35s ease;
+    box-shadow: 0 4px 15px rgba(201, 167, 62, 0.4);
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.btn-cinematic:hover {
+    background-color: #ffffff;
+    color: #C9A73E;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(201, 167, 62, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 968px) {
@@ -851,6 +971,35 @@ body {
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         transition: left 0.3s ease;
         gap: 20px;
+           /* Hero cinematic responsive tablet */
+    .hero-cinematic {
+        min-height: 600px;
+    }
+
+    .hero-content-cinematic {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+    }
+
+    .hero-title-cinematic {
+        font-size: 2.8rem;
+    }
+
+    .hero-text-cinematic {
+        font-size: 1.1rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-cinematic {
+        padding: 14px 40px;
+    }
+
+    /* Désactiver l'animation zoom sur mobile (performance) */
+    .hero-bg-image {
+        animation: none;
     }
     
     .nav-menu.active {
@@ -918,7 +1067,42 @@ body {
     .logo-subtitle {
         font-size: 0.65rem;
     }
-}
+       /* Hero cinematic responsive mobile */
+    .hero-cinematic {
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .hero-content-cinematic {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .hero-title-cinematic {
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 20px;
+        letter-spacing: 0.8px;
+    }
+
+    .hero-text-cinematic {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .btn-cinematic {
+        padding: 12px 35px;
+        font-size: 0.95rem;
+        width: auto;
+    }
+
+    /* Overlay plus prononcé sur mobile pour meilleure lisibilité */
+    .hero-overlay-cinematic {
+        opacity: 0.45;
+    }
 
 /* ===== SMOOTH SCROLLING ===== */
 html {
