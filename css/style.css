@@ -642,10 +642,6 @@ body {
     object-position: center;
 }
 
-.team-initials {
-    display: none;
-}
-
 .team-card h3 {
     font-size: 1.6rem;
     margin-bottom: 10px;
@@ -977,6 +973,21 @@ body {
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         transition: left 0.3s ease;
         gap: 20px;
+           }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .language-selector {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
            /* Hero cinematic responsive tablet */
     .hero-cinematic {
         min-height: 600px;
