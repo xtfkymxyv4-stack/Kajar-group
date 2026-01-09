@@ -459,6 +459,29 @@ document.addEventListener('DOMContentLoaded', function() {
             pauseOnMouseEnter: true
         }
     });
+    // Initialiser le carousel "Actualités" (photos forum)
+const actualitesSwiper = new Swiper('.actualites-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+    }
+});
+
+console.log('- Actualites carousel:', actualitesSwiper);
+
 
     // Log pour confirmer l'initialisation
     console.log('✅ Swiper carousels initialized successfully!');
