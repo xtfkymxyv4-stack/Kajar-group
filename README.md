@@ -258,7 +258,7 @@ République de Guinée-Bissau
 +245 957 603 951
 
 **Email** :  
-groupkajar@gmail.com
+contact@kajargroup.com
 
 ---
 

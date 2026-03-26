@@ -407,7 +407,7 @@ Si hébergé sur Netlify, simplement ajouter `netlify` dans la balise form.
 
 ### KAJAR GROUP
 **Adresse** : Bissau Praça, République de Guinée-Bissau  
-**Email** : groupkajar@gmail.com  
+**Email** : contact@kajargroup.com
 **Téléphone** : +221 77 519 1137 / +245 957 603 951
 
 ---

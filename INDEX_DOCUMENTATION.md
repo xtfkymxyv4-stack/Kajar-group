@@ -264,7 +264,7 @@ Bienvenue dans la documentation complète du site web KAJAR GROUP !
 ## 📞 Contact & Support
 
 ### Questions Techniques
-📧 Email : groupkajar@gmail.com  
+📧 Email : contact@kajargroup.com
 📱 Téléphone : +221 77 519 1137 / +245 957 603 951
 
 ### Suggestions d'Amélioration

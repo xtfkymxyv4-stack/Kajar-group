@@ -302,7 +302,7 @@ Dans `index.html`, dans `<head>`, ajoutez :
 
 Pour toute question ou assistance :
 
-**Email** : groupkajar@gmail.com  
+**Email** : contact@kajargroup.com
 **Téléphone** : +221 77 519 1137 / +245 957 603 951
 
 ---
